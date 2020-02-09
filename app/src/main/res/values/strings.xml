@@ -10,7 +10,7 @@
     <string name="simulate">Simular</string>
     <string name="simulation_result">Resultado da simulação</string>
     <string name="currency_value">R$ 1.088,69</string>
-    <string name="total_income">Rendimento total de <font color='#20B2BB'>R$ 88,69</font></string>
+    <string name="total_income">Rendimento total de</string>
     <string name="initially_applied_amount">Valor aplicado inicialmente</string>
     <string name="gross_investment_amount">Valor bruto do investimento</string>
     <string name="investment_value">Valor do investimento</string>

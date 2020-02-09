@@ -8,17 +8,25 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.simulatorcalculator.R
 import br.com.simulatorcalculator.view.resultsimulate.ResultSimulateActivity
-import br.com.simulatorcalculator.viewmodel.dataentrysimulate.DataEntrySimulateViewModel
+import br.com.simulatorcalculator.viewmodel.dataentrysimulate.validateFieldsEmpty
 import kotlinx.android.synthetic.main.activity_data_entry_simulate.*
 
 class DataEntrySimulateActivity : AppCompatActivity() {
 
-    private var dataEntrySimulateViewModel = DataEntrySimulateViewModel()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_entry_simulate)
+        setOnClickListener()
+        addTextChangedListener()
+    }
 
+    private fun addTextChangedListener() {
+        ed_data_entry_simulate_value.addTextChangedListener(textWatcher())
+        ed_data_entry_simulate_date.addTextChangedListener(textWatcher())
+        ed_data_entry_simulate_percentage.addTextChangedListener(textWatcher())
+    }
+
+    private fun setOnClickListener() {
         bt_data_entry_simulate_simulate.setOnClickListener {
             Intent(
                 this@DataEntrySimulateActivity,
@@ -27,10 +35,6 @@ class DataEntrySimulateActivity : AppCompatActivity() {
                 startActivity(intentResultSimulate)
             }
         }
-
-        ed_data_entry_simulate_value.addTextChangedListener(textWatcher())
-        ed_data_entry_simulate_date.addTextChangedListener(textWatcher())
-        ed_data_entry_simulate_percentage.addTextChangedListener(textWatcher())
     }
 
     private fun textWatcher(): TextWatcher {
@@ -43,7 +47,7 @@ class DataEntrySimulateActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 bt_data_entry_simulate_simulate.isEnabled =
-                    dataEntrySimulateViewModel.validateFieldsEmpty(
+                    validateFieldsEmpty(
                         ed_data_entry_simulate_value.text.toString(),
                         ed_data_entry_simulate_date.text.toString(),
                         ed_data_entry_simulate_percentage.text.toString()
