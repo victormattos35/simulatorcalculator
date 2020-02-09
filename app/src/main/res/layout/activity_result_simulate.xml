@@ -32,7 +32,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/currency_value"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView4"
@@ -44,7 +43,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/total_income"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_all_value"
                 app:layout_constraintStart_toStartOf="@+id/tv_result_simulate_all_value"
@@ -77,7 +75,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="R$ 1.000,00"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView7" />
@@ -95,7 +92,6 @@
                 android:id="@+id/tv_result_simulate_investment_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="R$ 1.088,69"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_applied_amount"
                 app:layout_constraintTop_toTopOf="@+id/textView9" />
 
@@ -112,7 +108,6 @@
                 android:id="@+id/tv_result_simulate_investment_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="R$ 88,69"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_investment_amount"
                 app:layout_constraintTop_toTopOf="@+id/textView11" />
 
@@ -129,7 +124,6 @@
                 android:id="@+id/tv_result_simulate_ir_on_investment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="R$ 15,52(17,50%)"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_investment_value"
                 app:layout_constraintTop_toTopOf="@+id/textView13" />
 
@@ -146,7 +140,6 @@
                 android:id="@+id/tv_result_simulate_net_investment_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="R$ 1.073,17"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_ir_on_investment"
                 app:layout_constraintTop_toTopOf="@+id/textView15" />
 
@@ -163,7 +156,6 @@
                 android:id="@+id/tv_result_simulate_redemption_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="27/10/2018"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_net_investment_value"
                 app:layout_constraintTop_toTopOf="@+id/textView17" />
 
@@ -180,7 +172,6 @@
                 android:id="@+id/tv_result_simulate_running_days"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="365"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_redemption_date"
                 app:layout_constraintTop_toTopOf="@+id/textView19" />
 
@@ -197,7 +188,6 @@
                 android:id="@+id/tv_result_simulate_monthly_income"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0,57%"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_running_days"
                 app:layout_constraintTop_toTopOf="@+id/textView20" />
 
@@ -214,7 +204,6 @@
                 android:id="@+id/tv_result_simulate_investment_cdi_percentage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="123%"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_monthly_income"
                 app:layout_constraintTop_toTopOf="@+id/textView21" />
 
@@ -231,7 +220,6 @@
                 android:id="@+id/tv_result_simulate_annual_profitability"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7,09%"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_investment_cdi_percentage"
                 app:layout_constraintTop_toTopOf="@+id/textView22" />
 
@@ -248,7 +236,6 @@
                 android:id="@+id/tv_result_simulate_profitability_in_the_period"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8,87%"
                 app:layout_constraintEnd_toEndOf="@+id/tv_result_simulate_annual_profitability"
                 app:layout_constraintTop_toTopOf="@+id/textView23" />
         </androidx.constraintlayout.widget.ConstraintLayout>
