@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">SimulatorCalculator</string>
+
+    <string name="how_much_would_you_like_to_apply">Quanto você gostaria de aplicar? *</string>
+    <string name="currency">R$</string>
+    <string name="what_is_the_investment_maturity_date">Qual a data de vencimento do investimento? *</string>
+    <string name="day_month_year">dia/mês/ano</string>
+    <string name="what_is_the_percentage_of_the_investment_cdi">Qual o percentual do CDI do investimento? *</string>
+    <string name="a_hundred_per_cent">100%</string>
+    <string name="simulate">Simular</string>
+    <string name="simulation_result">Resultado da simulação</string>
+    <string name="currency_value">R$ 1.088,69</string>
+    <string name="total_income">Rendimento total de <font color='#20B2BB'>R$ 88,69</font></string>
+    <string name="initially_applied_amount">Valor aplicado inicialmente</string>
+    <string name="gross_investment_amount">Valor bruto do investimento</string>
+    <string name="investment_value">Valor do investimento</string>
+    <string name="ir_on_investment">IR sobre o investimento</string>
+    <string name="net_investment_value">Valor líquido do investimento</string>
+    <string name="redemption_date">Data de resgate</string>
+    <string name="running_days">Dias corridos</string>
+    <string name="monthly_income">Rendimento mensal</string>
+    <string name="investment_cdi_percentage">Percentual do CDI do investimento</string>
+    <string name="annual_profitability">Rentabilidade anual</string>
+    <string name="profitability_in_the_period">Rentabilidade no período</string>
+    <string name="simulate_again">Simular novamente</string>
 </resources>
