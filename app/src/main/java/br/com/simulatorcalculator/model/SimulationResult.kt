@@ -29,11 +29,24 @@ data class SimulationResult(
     @SerializedName("annualNetRateProfit")
     val annualNetRateProfit: Double
 ) {
-    companion object{
-        fun simulationMocked() : SimulationResult {
-            var investmentParameter = InvestmentParameter(32323.0, 9.5512, 1981, 1409, Date(), 123.0, false)
-            var simulationResult = SimulationResult(investmentParameter, 60528.20, 4230.78, 56297.42, 28205.20, 23974.42, 87.26, 0.76,  0.000445330025305748, 15.0, 9.5512, 74.17)
-            return simulationResult
+    companion object {
+        fun simulationMocked(): SimulationResult {
+            var investmentParameter =
+                InvestmentParameter(32323.0, 9.5512, 1981, 1409, Date(), 123.0, false)
+            return SimulationResult(
+                investmentParameter,
+                60528.20,
+                4230.78,
+                56297.42,
+                28205.20,
+                23974.42,
+                87.26,
+                0.76,
+                0.000445330025305748,
+                15.0,
+                9.5512,
+                74.17
+            )
         }
     }
 }

@@ -13,7 +13,7 @@ fun formatToTwoDecimalPlaces(value: String): String {
     return String.format("%.2f", value.toDouble()).replace(".", ",")
 }
 
-fun formatDate(date: Date): String {
-    var dateFormat = SimpleDateFormat("dd/MM/yyyy")
+fun formatDate(date: Date, format: String): String {
+    var dateFormat = SimpleDateFormat(format)
     return dateFormat.format(date)
 }

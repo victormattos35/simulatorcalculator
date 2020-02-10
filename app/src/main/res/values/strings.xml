@@ -23,4 +23,11 @@
     <string name="annual_profitability">Rentabilidade anual</string>
     <string name="profitability_in_the_period">Rentabilidade no período</string>
     <string name="simulate_again">Simular novamente</string>
+    <string name="format_date_pt">dd/MM/yyyy</string>
+    <string name="format_date_eua">yyyy-MM-dd</string>
+    <string name="cdi">CDI</string>
+    <string name="error">Erro</string>
+    <string name="we_were_unable_to_execute_your_request">Não foi possível executar sua solicitação</string>
+    <string name="ok">OK</string>
+    <string name="format_date_invalid">Formato de data inválido</string>
 </resources>

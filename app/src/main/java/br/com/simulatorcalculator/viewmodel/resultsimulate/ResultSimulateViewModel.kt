@@ -15,15 +15,14 @@ class ResultSimulateViewModel : ViewModel() {
 
     val retrofitClient = InstanceRetrofit.getRetrofitInstance()
 
-    fun requestSimulate() {
+    fun requestSimulate(investedAmount: String, maturityDate: String, rate: String) {
         val simulationResultRequest = retrofitClient.create(SimulationResultRequest::class.java)
-        val simulationRequest = simulationResultRequest.getSimulation()
+        val simulationRequest =
+            simulationResultRequest.getSimulation(investedAmount, "CDI", rate, false, maturityDate)
         simulationRequest.enqueue(object : Callback<SimulationResult> {
             override fun onFailure(call: Call<SimulationResult>, t: Throwable) {
                 viewState.postValue(
-                    ResultSimulateViewState.onError(
-                        SimulationResult.simulationMocked()
-                    )
+                    ResultSimulateViewState.onError()
                 )
             }
 
@@ -32,7 +31,7 @@ class ResultSimulateViewModel : ViewModel() {
                 response: Response<SimulationResult>
             ) {
                 if (response.code() == 500) {
-                    viewState.postValue(ResultSimulateViewState.onSucess(SimulationResult.simulationMocked()))
+                    viewState.postValue(ResultSimulateViewState.onError())
                 } else viewState.postValue(
                     ResultSimulateViewState.onSucess(
                         response.body()

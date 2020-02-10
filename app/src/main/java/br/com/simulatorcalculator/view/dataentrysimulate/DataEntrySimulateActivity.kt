@@ -7,9 +7,11 @@ import android.text.TextWatcher
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.simulatorcalculator.R
+import br.com.simulatorcalculator.util.formatDate
 import br.com.simulatorcalculator.view.resultsimulate.ResultSimulateActivity
 import br.com.simulatorcalculator.viewmodel.dataentrysimulate.validateFieldsEmpty
 import kotlinx.android.synthetic.main.activity_data_entry_simulate.*
+import java.util.*
 
 class DataEntrySimulateActivity : AppCompatActivity() {
 
@@ -32,7 +34,27 @@ class DataEntrySimulateActivity : AppCompatActivity() {
                 this@DataEntrySimulateActivity,
                 ResultSimulateActivity::class.java
             ).also { intentResultSimulate ->
-                startActivity(intentResultSimulate)
+                try {
+                    intentResultSimulate.putExtra(
+                        "investedAmount",
+                        ed_data_entry_simulate_value.text
+                    )
+                    intentResultSimulate.putExtra(
+                        "maturityDate",
+                        formatDate(
+                            Date(ed_data_entry_simulate_date.text.toString()),
+                            applicationContext.getString(R.string.format_date_eua)
+                        )
+                    )
+                    intentResultSimulate.putExtra("rate", ed_data_entry_simulate_percentage.text)
+                    startActivity(intentResultSimulate)
+                } catch (error: IllegalArgumentException) {
+                    Toast.makeText(
+                        this@DataEntrySimulateActivity,
+                        applicationContext.getString(R.string.format_date_invalid),
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
             }
         }
     }
@@ -55,10 +77,4 @@ class DataEntrySimulateActivity : AppCompatActivity() {
             }
         }
     }
-
-    override fun onResume() {
-        Toast.makeText(this@DataEntrySimulateActivity, "Olá", Toast.LENGTH_LONG).show()
-        super.onResume()
-    }
-
 }
