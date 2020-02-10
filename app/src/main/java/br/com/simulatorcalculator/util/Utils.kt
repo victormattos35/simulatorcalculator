@@ -1,5 +1,6 @@
 package br.com.simulatorcalculator.util
 
+import kotlinx.android.synthetic.main.activity_data_entry_simulate.*
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -16,4 +17,8 @@ fun formatToTwoDecimalPlaces(value: String): String {
 fun formatDate(date: Date, format: String): String {
     var dateFormat = SimpleDateFormat(format)
     return dateFormat.format(date)
+}
+
+fun stringDateToDate(stringDate: String): Date {
+    return SimpleDateFormat("dd/MM/yyyy").parse(stringDate)
 }

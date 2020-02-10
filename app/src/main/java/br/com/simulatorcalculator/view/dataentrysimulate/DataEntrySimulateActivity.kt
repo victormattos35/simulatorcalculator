@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.simulatorcalculator.R
 import br.com.simulatorcalculator.util.formatDate
+import br.com.simulatorcalculator.util.stringDateToDate
 import br.com.simulatorcalculator.view.resultsimulate.ResultSimulateActivity
 import br.com.simulatorcalculator.viewmodel.dataentrysimulate.validateFieldsEmpty
 import kotlinx.android.synthetic.main.activity_data_entry_simulate.*
@@ -42,7 +43,7 @@ class DataEntrySimulateActivity : AppCompatActivity() {
                     intentResultSimulate.putExtra(
                         "maturityDate",
                         formatDate(
-                            Date(ed_data_entry_simulate_date.text.toString()),
+                            stringDateToDate(ed_data_entry_simulate_date.text.toString()),
                             applicationContext.getString(R.string.format_date_eua)
                         )
                     )
